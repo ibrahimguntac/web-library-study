@@ -76,7 +76,7 @@ public class AuthorDAOImp implements AuthorDAO {
             query.setParameter("theName", "%" + searchNameAndSurname.toLowerCase() + "%");
         }else {
 
-            // searchName is empty ... so just get all customers
+            // searchName is empty ... so just get all authors
             query = currentSession.createQuery("from Author", Author.class);
         }
 
