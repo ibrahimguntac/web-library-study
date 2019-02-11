@@ -36,10 +36,13 @@ public class BookController implements InitializingBean{
     @GetMapping("/list")
     public String listBooks(Model theModel) {
 
+        // get the books from service
         List<Book> bookList = bookService.getBooks();
 
+        // add the books to the model
         theModel.addAttribute("books", bookList);
 
+        // return view
         return "book-list";
     }
 
